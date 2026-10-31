@@ -3,9 +3,9 @@
 </div>
 
 <p align="center">
-  <a href="https://spb.hh.ru/resume/7757eabdff1139119b0039ed1f5949336c3345"><img src="https://img.shields.io/badge/open_to_work-resume-238636?style=for-the-badge&logo=checkmarx&logoColor=white&labelColor=0D1117" alt="open to work" /></a>
+  <a href="https://spb.hh.ru/resume/7757eabdff1139119b0039ed1f5949336c3345"><img src="https://img.shields.io/badge/OPEN_TO_WORK-resume-238636?style=for-the-badge&labelColor=0D1117" alt="open to work" /></a>
   <a href="mailto:it-3@yandex.ru"><img src="https://img.shields.io/badge/email-it--3%40yandex.ru-EA4335?style=for-the-badge&logo=gmail&logoColor=white&labelColor=0D1117" alt="email" /></a>
-  <img src="https://img.shields.io/badge/СПб-удалённо-58A6FF?style=for-the-badge&logo=googlemaps&logoColor=white&labelColor=0D1117" alt="location" />
+  <img src="https://img.shields.io/badge/Saint_Petersburg-remote-58A6FF?style=for-the-badge&logo=googlemaps&logoColor=white&labelColor=0D1117" alt="location" />
 </p>
 
 ---
