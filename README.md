@@ -49,13 +49,6 @@ Linux / DevOps-инженер, **3+ года практики**. Отвечаю 
 - **README — часть работы.** Схема, запуск, ограничения: чтобы через полгода не расшифровывать собственные конфиги.
 - **Ручную операцию, повторённую трижды, превращаю в роль или скрипт.**
 
-## GitHub
-
-<p align="center">
-  <img height="150" src="https://github-readme-stats.vercel.app/api?username=IT-DO&show_icons=true&theme=tokyonight&hide_title=true&hide_border=true&hide=issues" alt="stats" />
-  <img height="150" src="https://streak-stats.demolab.com/?user=IT-DO&theme=tokyonight&hide_border=true" alt="streak" />
-</p>
-
 ---
 
 <div align="center">
