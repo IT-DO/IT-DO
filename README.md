@@ -1,7 +1,7 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/hero.svg?v=3">
-  <source media="(prefers-color-scheme: light)" srcset="assets/hero-light.svg?v=3">
-  <img alt="Anton Kurishchev — Linux / DevOps engineer, Saint Petersburg, open to work" src="assets/hero.svg?v=3" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/hero.svg?v=4">
+  <source media="(prefers-color-scheme: light)" srcset="assets/hero-light.svg?v=4">
+  <img alt="Anton Kurishchev — Linux / DevOps engineer, Saint Petersburg, open to work" src="assets/hero.svg?v=4" width="100%">
 </picture>
 
 <p align="center">
@@ -25,9 +25,9 @@
 ## Инфраструктура
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/homelab.svg?v=3">
-  <source media="(prefers-color-scheme: light)" srcset="assets/homelab-light.svg?v=3">
-  <img alt="Homelab: узел n100 на Proxmox VE 9.2 — восемь гостей (HAOS, bitclimat, Kuber, hermes-agent, PBS, prometheus, zabbix, ansible) с vCPU, RAM и дисками, четыре хранилища" src="assets/homelab.svg?v=3" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/homelab.svg?v=4">
+  <source media="(prefers-color-scheme: light)" srcset="assets/homelab-light.svg?v=4">
+  <img alt="Homelab: узел n100 на Proxmox VE 9.2 — восемь гостей (HAOS, bitclimat, Kuber, hermes-agent, PBS, prometheus, zabbix, ansible) с vCPU, RAM и дисками, четыре хранилища" src="assets/homelab.svg?v=4" width="100%">
 </picture>
 
 <sub>Не рисунок «для красоты»: значения сняты с узла через API.[^1]</sub>

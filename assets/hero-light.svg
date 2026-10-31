@@ -6,8 +6,8 @@
       <stop offset="100%" stop-color="#eef2f6"/>
     </linearGradient>
     <radialGradient id="glow" cx="0.2" cy="0.45" r="0.55">
-      <stop offset="0%" stop-color="#0969da" stop-opacity="0.16"/>
-      <stop offset="60%" stop-color="#0969da" stop-opacity="0.04"/>
+      <stop offset="0%" stop-color="#0969da" stop-opacity="0.07"/>
+      <stop offset="60%" stop-color="#0969da" stop-opacity="0.02"/>
       <stop offset="100%" stop-color="#0969da" stop-opacity="0"/>
     </radialGradient>
     <linearGradient id="accent" x1="0" y1="0" x2="0" y2="1">
@@ -22,7 +22,7 @@
       <feDropShadow dx="0" dy="10" stdDeviation="16" flood-color="#000000" flood-opacity="0.14"/>
     </filter>
     <pattern id="hg" width="26" height="26" patternUnits="userSpaceOnUse">
-      <path d="M26 0H0V26" fill="none" stroke="#d8dee4" stroke-width="1" opacity="0.32"/>
+      <path d="M26 0H0V26" fill="none" stroke="#d8dee4" stroke-width="1" opacity="0.25"/>
     </pattern>
   </defs>
 
