@@ -46,10 +46,10 @@
     <text x="76" y="22" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#8B949E">infra@n100 ~ %</text>
 
     <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13.5">
-      <text x="20" y="62" fill="#7EE787">$ kubectl get nodes</text>
-      <text x="20" y="84" fill="#C9D1D9">k3s-1   Ready   control-plane   128d</text>
-      <text x="20" y="112" fill="#7EE787">$ systemctl is-active prometheus grafana zabbix</text>
-      <text x="20" y="134" fill="#C9D1D9">active / active / active</text>
+      <text x="20" y="62" fill="#7EE787">$ pct list</text>
+      <text x="20" y="84" fill="#C9D1D9">8 guests · 5 storages · ceph-rbd</text>
+      <text x="20" y="112" fill="#7EE787">$ kubectl get nodes</text>
+      <text x="20" y="134" fill="#C9D1D9">k3s-1   Ready   control-plane   128d</text>
       <text x="20" y="162" fill="#7EE787">$ pbs-backup --check</text>
       <text x="20" y="184" fill="#C9D1D9">last: 02:00  ✓ restore verified</text>
     </g>

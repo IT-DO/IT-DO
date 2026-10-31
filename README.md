@@ -16,35 +16,47 @@ Linux / DevOps-инженер, **3+ года практики**. Строю и �
 
 Ищу роль **Linux / DevOps / SRE** в Санкт-Петербурге или удалённо.
 
-## Homelab 24/7 — инфраструктура, которую видно
+## Homelab 24/7 — 8 гостей на одном узле
+
+**Proxmox VE 9** · узел `n100` (Intel N100, 24/7) · 8 гостей · 5 хранилищ
+
+```text
+n100
+├── 100  HAOS ........... умный дом (Home Assistant OS)
+├── 101  web-prod ....... боевой сайт клиента · Nginx + TLS
+├── 102  Kuber .......... кластер k3s
+├── 103  hermes-agent ... AI-агент · автоматизация и алерты
+├── 104  PBS ............ Proxmox Backup Server
+├── 200  prometheus ..... метрики, scrape 15s
+├── 201  zabbix ......... мониторинг железа, триггеры
+└── 202  ansible ........ control node · IaC
+
+хранилища: local · local-lvm · ceph-vmstore · PBS-Server · localnetwork
+```
+
+| Слой | Что развёрнуто | Что это даёт |
+|---|---|---|
+| **Гипервизор** | Proxmox VE 9, 8 гостей, 5 хранилищ | плотная упаковка на одном N100: сервисы изолированы, ресурсы не пересекаются |
+| **Прод** | `101 web-prod` — Nginx + TLS | боевая нагрузка: виртуальные хосты, сертификаты, логи, обновления без простоя |
+| **Оркестрация** | `102 Kuber` — k3s | Deployment / Service / Ingress / PVC, деплой и откат через манифесты |
+| **Наблюдаемость** | `200 prometheus` + `201 zabbix` | метрики приложений и железа, триггеры, алерты в Telegram |
+| **Бэкапы** | `104 PBS` + хранилище `PBS-Server` | инкрементальный бэкап гостей на отдельном узле + проверка восстановления |
+| **IaC** | `202 ansible` | инвентарь по группам, идемпотентные роли, `--check` перед продом |
+| **Хранение** | `ceph-vmstore` | Ceph RBD как бэкенд дисков VM вместо локального LVM |
+| **Агент** | `103 hermes-agent` | автоматизация рутины: сбор метрик, алерты, отчёты |
 
 ```mermaid
 flowchart LR
-    U(["👤 Клиенты / браузер"]) --> NG["Nginx<br/>TLS · reverse proxy"]
-    NG --> SHOP["Магазин<br/>55 000 SKU"]
-    NG --> GF["Grafana<br/>дашборды"]
-
-    subgraph PVE["Proxmox VE 9 · Intel N100 · 24/7"]
-        K3S["VM · k3s cluster"]
-        HA["VM · Home Assistant"]
-        PBS["VM · Proxmox Backup Server"]
-        MON["LXC · Prometheus + Zabbix"]
-        ANS["LXC · Ansible control node"]
-    end
-
-    K3S --> MON
-    MON -->|алерты| TG(["📨 Telegram"])
-    PBS -.->|ежедневные бэкапы + проверка восстановления| K3S
+    PM["200 · Prometheus"] -.->|scrape| WP["101 · web-prod"]
+    PM -.->|scrape| K3["102 · Kuber"]
+    ZB["201 · Zabbix"] -.->|агенты| WP
+    ZB -->|алерты| TG(["📨 Telegram"])
+    PBS["104 · PBS"] -.->|бэкап| WP
+    PBS -.->|бэкап| K3
+    AN["202 · Ansible"] -.->|playbooks| K3
 ```
 
-| Компонент | Что сделано |
-|---|---|
-| **Виртуализация** | Proxmox VE 9 на Intel N100: 3 VM + 5 LXC, 24/7 |
-| **Kubernetes** | кластер k3s: деплой, обслуживание, манифесты (Deployment/Service/Ingress/PVC) |
-| **Мониторинг** | Prometheus + Grafana + Zabbix, алерты по триггерам в Telegram |
-| **Бэкапы** | Proxmox Backup Server: ежедневные инкрементальные, с проверкой восстановления |
-| **Автоматизация** | Ansible (роли, инвентарь, `--check`), скрипты Bash/Python |
-| **Сеть** | VLAN, VPN, firewall, DHCP, DNS |
+Отдельный PBS-узел вместо бэкапа «на тот же диск» и Ceph RBD под диски VM — два решения, которые чаще всего ломаются в домашних стендах, и оба здесь сделаны осознанно.
 
 ## Проекты
 
