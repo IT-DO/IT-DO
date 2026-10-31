@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-label="Anton Kurishchev — Linux / DevOps engineer">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1220"/>
+      <stop offset="55%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#58A6FF"/>
+      <stop offset="100%" stop-color="#22D3EE"/>
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#1f2937" stroke-width="1" opacity="0.45"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="320" rx="18" fill="url(#bg)"/>
+  <rect width="1200" height="320" rx="18" fill="url(#grid)"/>
+  <rect x="0.5" y="0.5" width="1199" height="319" rx="18" fill="none" stroke="#1f2937"/>
+
+  <!-- left accent bar -->
+  <rect x="0" y="0" width="6" height="320" rx="3" fill="url(#accent)" opacity="0.9"/>
+
+  <!-- name + role -->
+  <text x="56" y="112" font-family="'Segoe UI', Arial, sans-serif" font-size="52" font-weight="700" fill="#E6EDF3">Anton Kurishchev</text>
+  <text x="58" y="158" font-family="'Segoe UI', Arial, sans-serif" font-size="26" font-weight="600" fill="url(#accent)">Linux / DevOps engineer</text>
+  <text x="58" y="192" font-family="'Segoe UI', Arial, sans-serif" font-size="17" fill="#9CA3AF">Proxmox · Kubernetes (k3s) · Ansible · Prometheus / Grafana / Zabbix</text>
+
+  <!-- chips -->
+  <g font-family="'Segoe UI', Arial, sans-serif" font-size="14" fill="#C9D1D9">
+    <rect x="58" y="216" width="150" height="30" rx="15" fill="#161B22" stroke="#30363D"/>
+    <text x="76" y="236">📍 Saint Petersburg</text>
+    <rect x="220" y="216" width="132" height="30" rx="15" fill="#161B22" stroke="#30363D"/>
+    <text x="238" y="236">🌐 remote-friendly</text>
+    <rect x="364" y="216" width="128" height="30" rx="15" fill="#0F2A1D" stroke="#238636"/>
+    <text x="382" y="236" fill="#7EE787">🟢 open to work</text>
+  </g>
+
+  <!-- terminal card -->
+  <g transform="translate(720,64)">
+    <rect width="424" height="192" rx="12" fill="#0D1117" stroke="#30363D"/>
+    <rect width="424" height="34" rx="12" fill="#161B22"/>
+    <circle cx="22" cy="17" r="5" fill="#FF5F56"/>
+    <circle cx="40" cy="17" r="5" fill="#FFBD2E"/>
+    <circle cx="58" cy="17" r="5" fill="#27C93F"/>
+    <text x="76" y="22" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#8B949E">infra@n100 ~ %</text>
+
+    <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13.5">
+      <text x="20" y="62" fill="#7EE787">$ kubectl get nodes</text>
+      <text x="20" y="84" fill="#C9D1D9">k3s-1   Ready   control-plane   128d</text>
+      <text x="20" y="112" fill="#7EE787">$ systemctl is-active prometheus grafana zabbix</text>
+      <text x="20" y="134" fill="#C9D1D9">active / active / active</text>
+      <text x="20" y="162" fill="#7EE787">$ pbs-backup --check</text>
+      <text x="20" y="184" fill="#C9D1D9">last: 02:00  ✓ restore verified</text>
+    </g>
+  </g>
+</svg>

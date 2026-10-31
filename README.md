@@ -1,68 +1,95 @@
 <div align="center">
-
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&duration=3000&pause=800&color=58A6FF&center=true&vCenter=true&width=600&lines=Anton+Kurishchev;Linux+%2F+DevOps+Engineer;Infrastructure+%26+Automation" alt="typing" />
-
-<br/>
-
-<a href="https://github.com/IT-DO"><img src="https://img.shields.io/github/followers/IT-DO?label=followers&style=for-the-badge&color=58A6FF&labelColor=0D1117" /></a>
-<a href="mailto:it-3@yandex.ru"><img src="https://img.shields.io/badge/email-it--3%40yandex.ru-EA4335?style=for-the-badge&logo=gmail&logoColor=white&labelColor=0D1117" /></a>
-<img src="https://komarev.com/ghpvc/?username=IT-DO&label=profile+views&color=58A6FF&style=flat-square" alt="views" />
-
+  <img src="assets/hero.svg" alt="Anton Kurishchev — Linux / DevOps engineer" width="100%" />
 </div>
 
----
-
-> 🟢 **Open to work / Открыт к работе** — Linux & DevOps engineer · Saint Petersburg / remote · [resume on hh.ru](https://spb.hh.ru/resume/7757eabdff1139119b0039ed1f5949336c3345) · it-3@yandex.ru
-
-### 👨‍💻 About me
-
-Linux & DevOps engineer focused on infrastructure and automation. I run a self-hosted homelab (Proxmox + Docker + Kubernetes/k3s), monitor it with Prometheus/Grafana/Zabbix, and automate routine work with Ansible, Bash and Python.
-
-### 🛠️ Tech stack
-
 <p align="center">
-  <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" />
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
-  <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white" />
-  <img src="https://img.shields.io/badge/Proxmox-E57000?style=for-the-badge&logo=proxmox&logoColor=white" />
-  <img src="https://img.shields.io/badge/Ansible-EE0000?style=for-the-badge&logo=ansible&logoColor=white" />
-  <img src="https://img.shields.io/badge/Prometheus-E6522C?style=for-the-badge&logo=prometheus&logoColor=white" />
-  <img src="https://img.shields.io/badge/Grafana-F46800?style=for-the-badge&logo=grafana&logoColor=white" />
-  <img src="https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white" />
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white" />
-</p>
-
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=linux,docker,kubernetes,bash,python,git,nginx,prometheus,grafana" />
+  <a href="https://spb.hh.ru/resume/7757eabdff1139119b0039ed1f5949336c3345"><img src="https://img.shields.io/badge/open_to_work-resume-238636?style=for-the-badge&logo=checkmarx&logoColor=white&labelColor=0D1117" alt="open to work" /></a>
+  <a href="mailto:it-3@yandex.ru"><img src="https://img.shields.io/badge/email-it--3%40yandex.ru-EA4335?style=for-the-badge&logo=gmail&logoColor=white&labelColor=0D1117" alt="email" /></a>
+  <img src="https://img.shields.io/badge/СПб-удалённо-58A6FF?style=for-the-badge&logo=googlemaps&logoColor=white&labelColor=0D1117" alt="location" />
 </p>
 
 ---
 
-### 📊 GitHub stats
+## Кто я
 
-<p align="center">
-  <img height="160" src="https://github-readme-stats.vercel.app/api?username=IT-DO&show_icons=true&theme=tokyonight&hide_title=true&hide_border=true" />
-  <img height="160" src="https://streak-stats.demolab.com/?user=IT-DO&theme=tokyonight&hide_border=true" />
-</p>
+Linux / DevOps-инженер, **3+ года практики**. Строю и обслуживаю инфраструктуру как код: виртуализация, Kubernetes, мониторинг, бэкапы, автоматизация. Веду собственный homelab **24/7** — это не учебный стенд, а рабочая среда с боевой нагрузкой.
 
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=IT-DO&theme=tokyonight&no-frame=true&column=6&margin-w=8" />
-</p>
+Ищу роль **Linux / DevOps / SRE** в Санкт-Петербурге или удалённо.
 
----
+## Homelab 24/7 — инфраструктура, которую видно
 
-### 🚀 Featured projects
+```mermaid
+flowchart LR
+    U(["👤 Клиенты / браузер"]) --> NG["Nginx<br/>TLS · reverse proxy"]
+    NG --> SHOP["Магазин<br/>55 000 SKU"]
+    NG --> GF["Grafana<br/>дашборды"]
 
-| Project | What it does |
+    subgraph PVE["Proxmox VE 9 · Intel N100 · 24/7"]
+        K3S["VM · k3s cluster"]
+        HA["VM · Home Assistant"]
+        PBS["VM · Proxmox Backup Server"]
+        MON["LXC · Prometheus + Zabbix"]
+        ANS["LXC · Ansible control node"]
+    end
+
+    K3S --> MON
+    MON -->|алерты| TG(["📨 Telegram"])
+    PBS -.->|ежедневные бэкапы + проверка восстановления| K3S
+```
+
+| Компонент | Что сделано |
 |---|---|
-| **[crypto-monitor](https://github.com/IT-DO/crypto-monitor)** | Crypto monitoring, backtesting and paper-trading on public APIs — Python + Telegram + Binance |
-| **[homelab-docker](https://github.com/IT-DO/homelab-docker)** | Docker Compose stack for my self-hosted homelab |
-| **[k3s-manifests](https://github.com/IT-DO/k3s-manifests)** | Kubernetes manifests for a k3s cluster |
-| **[homelab-ansible](https://github.com/IT-DO/homelab-ansible)** | Ansible configs for my home infrastructure |
+| **Виртуализация** | Proxmox VE 9 на Intel N100: 3 VM + 5 LXC, 24/7 |
+| **Kubernetes** | кластер k3s: деплой, обслуживание, манифесты (Deployment/Service/Ingress/PVC) |
+| **Мониторинг** | Prometheus + Grafana + Zabbix, алерты по триггерам в Telegram |
+| **Бэкапы** | Proxmox Backup Server: ежедневные инкрементальные, с проверкой восстановления |
+| **Автоматизация** | Ansible (роли, инвентарь, `--check`), скрипты Bash/Python |
+| **Сеть** | VLAN, VPN, firewall, DHCP, DNS |
+
+## Проекты
+
+| Проект | Стек | Что демонстрирует |
+|---|---|---|
+| **[crypto-monitor](https://github.com/IT-DO/crypto-monitor)** | Python · Binance API · Telegram | мониторинг рынка, бэктест и paper-trading: работа с внешним API, планировщик, алерты |
+| **[homelab-ansible](https://github.com/IT-DO/homelab-ansible)** | Ansible | инфраструктура как код: инвентарь по группам, идемпотентные роли, безопасный rollout |
+| **[k3s-manifests](https://github.com/IT-DO/k3s-manifests)** | Kubernetes | примитивы k8s: Deployment, Service, Ingress (Traefik), PVC, requests/limits |
+| **[homelab-docker](https://github.com/IT-DO/homelab-docker)** | Docker Compose | сервисный стек: reverse proxy, Prometheus, Grafana, node-exporter |
+| **[hh-autopilot](https://github.com/IT-DO/hh-autopilot)** | JavaScript · MV3 | расширение для браузера: парсинг страниц, фильтры, лимиты, устойчивость к ошибкам |
+| **[career-ops](https://github.com/IT-DO/career-ops)** | Python | автоматизация поиска работы: сбор вакансий, оценка и отбор |
+
+## Стек
+
+| Домен | Инструменты |
+|---|---|
+| **ОС** | Linux (Ubuntu, CentOS, Debian), Windows Server |
+| **Виртуализация** | Proxmox VE, VMware, Hyper-V |
+| **Контейнеры** | Docker, Kubernetes (k3s), Docker Compose |
+| **Мониторинг** | Prometheus, Grafana, Zabbix, Alertmanager |
+| **Автоматизация** | Ansible, Bash, Python, Git |
+| **Веб / сеть** | Nginx, Traefik, TLS, DNS, DHCP, VLAN, VPN, firewall |
+| **Прочее** | PostgreSQL, SQL Server, Active Directory, REST API, Ceph |
+
+## Как я работаю
+
+- **Всё как код.** Конфиги и манифесты в Git, ручные правки — исключение, а не правило.
+- **Мониторинг с первого дня.** Сервис без метрик и алертов — это сервис, о падении которого узнают пользователи.
+- **Бэкап без проверки восстановления — не бэкап.** Регулярно восстанавливаю из копий.
+- **Сначала `--check`.** На хостах с боевой нагрузкой изменения проверяются до применения.
+- **Документирую.** README в каждом репозитории: схема, запуск, ограничения.
+
+## GitHub
+
+<p align="center">
+  <img height="150" src="https://github-readme-stats.vercel.app/api?username=IT-DO&show_icons=true&theme=tokyonight&hide_title=true&hide_border=true&hide=issues" alt="stats" />
+  <img height="150" src="https://streak-stats.demolab.com/?user=IT-DO&theme=tokyonight&hide_border=true" alt="streak" />
+</p>
 
 ---
 
 <div align="center">
-  <sub>📍 Saint-Petersburg, Russia</sub>
+
+**Открыт к работе** · Linux / DevOps / SRE · Санкт-Петербург / удалённо
+
+[it-3@yandex.ru](mailto:it-3@yandex.ru) · [резюме на hh.ru](https://spb.hh.ru/resume/7757eabdff1139119b0039ed1f5949336c3345)
+
 </div>
