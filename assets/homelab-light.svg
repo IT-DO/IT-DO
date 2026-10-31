@@ -1,0 +1,158 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-label="Homelab n100: 8 гостей на Proxmox VE, ресурсы и хранилища">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f6f8fa"/>
+    </linearGradient>
+    <linearGradient id="bar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0969da"/>
+      <stop offset="100%" stop-color="#0969da"/>
+    </linearGradient>
+    <pattern id="grid2" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#d8dee4" stroke-width="1" opacity="0.6"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="680" rx="18" fill="url(#bg2)"/>
+  <rect width="1200" height="680" rx="18" fill="url(#grid2)"/>
+  <rect x="0.5" y="0.5" width="1199" height="679" rx="18" fill="none" stroke="#d8dee4"/>
+
+  <!-- header -->
+  <text x="48" y="62" font-family="'Segoe UI', Arial, sans-serif" font-size="30" font-weight="700" fill="#1f2328">homelab · n100</text>
+  <text x="48" y="90" font-family="'Segoe UI', Arial, sans-serif" font-size="14.5" fill="#59636e">Proxmox VE 9.2 · Intel N100, 4 ядра · 11.4 ГБ RAM · 24/7</text>
+
+  <rect x="944" y="44" width="208" height="34" rx="17" fill="#dafbe1" stroke="#4ac26b"/>
+  <circle cx="966" cy="61" r="5" fill="#1a7f37"/>
+  <text x="982" y="66" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#1a7f37">8 гостей · все running</text>
+
+  <!-- left panel: guests -->
+  <rect x="40" y="116" width="704" height="546" rx="12" fill="#ffffff" fill-opacity="1" stroke="#d8dee4"/>
+  <text x="62" y="146" font-family="'Segoe UI', Arial, sans-serif" font-size="12.5" letter-spacing="1.2" fill="#59636e">ГОСТИ</text>
+  <text x="722" y="146" text-anchor="end" font-family="'Segoe UI', Arial, sans-serif" font-size="12.5" letter-spacing="0.6" fill="#59636e">vCPU · RAM · ДИСК</text>
+
+  <!-- rows -->
+  <g font-family="'Segoe UI', Arial, sans-serif">
+    <!-- 100 HAOS -->
+    <line x1="62" y1="162" x2="722" y2="162" stroke="#d8dee4" opacity="0.6"/>
+    <text x="62" y="190" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="13" fill="#59636e">100</text>
+    <text x="112" y="191" font-size="15.5" font-weight="600" fill="#1f2328">HAOS</text>
+    <rect x="300" y="175" width="46" height="21" rx="10.5" fill="#ddf4ff" stroke="#54aeff"/>
+    <text x="323" y="190" text-anchor="middle" font-size="10.5" fill="#0969da">VM</text>
+    <text x="112" y="211" font-size="12" fill="#59636e">умный дом, Home Assistant OS</text>
+    <text x="722" y="196" text-anchor="end" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="12.5" fill="#1f2328">2 · 2 ГБ · 32 ГБ</text>
+
+    <!-- 101 bitclimat -->
+    <line x1="62" y1="224" x2="722" y2="224" stroke="#d8dee4" opacity="0.6"/>
+    <text x="62" y="252" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="13" fill="#59636e">101</text>
+    <text x="112" y="253" font-size="15.5" font-weight="600" fill="#1f2328">bitclimat</text>
+    <rect x="300" y="237" width="46" height="21" rx="10.5" fill="#dafbe1" stroke="#4ac26b"/>
+    <text x="323" y="252" text-anchor="middle" font-size="10.5" fill="#1a7f37">LXC</text>
+    <text x="112" y="273" font-size="12" fill="#59636e">боевой сайт клиента · Nginx + TLS</text>
+    <text x="722" y="258" text-anchor="end" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="12.5" fill="#1a7f37">6 · 4 ГБ · 80 ГБ</text>
+
+    <!-- 102 Kuber -->
+    <line x1="62" y1="286" x2="722" y2="286" stroke="#d8dee4" opacity="0.6"/>
+    <text x="62" y="314" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="13" fill="#59636e">102</text>
+    <text x="112" y="315" font-size="15.5" font-weight="600" fill="#1f2328">Kuber</text>
+    <rect x="300" y="299" width="46" height="21" rx="10.5" fill="#ddf4ff" stroke="#54aeff"/>
+    <text x="323" y="314" text-anchor="middle" font-size="10.5" fill="#0969da">VM</text>
+    <text x="112" y="335" font-size="12" fill="#59636e">кластер k3s</text>
+    <text x="722" y="320" text-anchor="end" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="12.5" fill="#1f2328">2 · 2 ГБ · 32 ГБ</text>
+
+    <!-- 103 hermes-agent -->
+    <line x1="62" y1="348" x2="722" y2="348" stroke="#d8dee4" opacity="0.6"/>
+    <text x="62" y="376" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="13" fill="#59636e">103</text>
+    <text x="112" y="377" font-size="15.5" font-weight="600" fill="#1f2328">hermes-agent</text>
+    <rect x="300" y="361" width="46" height="21" rx="10.5" fill="#dafbe1" stroke="#4ac26b"/>
+    <text x="323" y="376" text-anchor="middle" font-size="10.5" fill="#1a7f37">LXC</text>
+    <text x="112" y="397" font-size="12" fill="#59636e">AI-агент · автоматизация и алерты</text>
+    <text x="722" y="382" text-anchor="end" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="12.5" fill="#1f2328">2 · 2 ГБ · 30 ГБ</text>
+
+    <!-- 104 PBS -->
+    <line x1="62" y1="410" x2="722" y2="410" stroke="#d8dee4" opacity="0.6"/>
+    <text x="62" y="438" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="13" fill="#59636e">104</text>
+    <text x="112" y="439" font-size="15.5" font-weight="600" fill="#1f2328">PBS</text>
+    <rect x="300" y="423" width="46" height="21" rx="10.5" fill="#ddf4ff" stroke="#54aeff"/>
+    <text x="323" y="438" text-anchor="middle" font-size="10.5" fill="#0969da">VM</text>
+    <text x="112" y="459" font-size="12" fill="#59636e">Proxmox Backup Server · USB 488 ГБ</text>
+    <text x="722" y="444" text-anchor="end" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="12.5" fill="#1f2328">2 · 2 ГБ · 20 ГБ</text>
+
+    <!-- 200 prometheus -->
+    <line x1="62" y1="472" x2="722" y2="472" stroke="#d8dee4" opacity="0.6"/>
+    <text x="62" y="500" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="13" fill="#59636e">200</text>
+    <text x="112" y="501" font-size="15.5" font-weight="600" fill="#1f2328">prometheus</text>
+    <rect x="300" y="485" width="46" height="21" rx="10.5" fill="#dafbe1" stroke="#4ac26b"/>
+    <text x="323" y="500" text-anchor="middle" font-size="10.5" fill="#1a7f37">LXC</text>
+    <text x="112" y="521" font-size="12" fill="#59636e">метрики приложений · scrape 15s</text>
+    <text x="722" y="506" text-anchor="end" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="12.5" fill="#1f2328">2 · 1 ГБ · 8 ГБ</text>
+
+    <!-- 201 zabbix -->
+    <line x1="62" y1="534" x2="722" y2="534" stroke="#d8dee4" opacity="0.6"/>
+    <text x="62" y="562" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="13" fill="#59636e">201</text>
+    <text x="112" y="563" font-size="15.5" font-weight="600" fill="#1f2328">zabbix</text>
+    <rect x="300" y="547" width="46" height="21" rx="10.5" fill="#dafbe1" stroke="#4ac26b"/>
+    <text x="323" y="562" text-anchor="middle" font-size="10.5" fill="#1a7f37">LXC</text>
+    <text x="112" y="583" font-size="12" fill="#59636e">мониторинг железа · триггеры</text>
+    <text x="722" y="568" text-anchor="end" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="12.5" fill="#1f2328">2 · 1 ГБ · 12 ГБ</text>
+
+    <!-- 202 ansible -->
+    <line x1="62" y1="596" x2="722" y2="596" stroke="#d8dee4" opacity="0.6"/>
+    <text x="62" y="624" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="13" fill="#59636e">202</text>
+    <text x="112" y="625" font-size="15.5" font-weight="600" fill="#1f2328">ansible</text>
+    <rect x="300" y="609" width="46" height="21" rx="10.5" fill="#dafbe1" stroke="#4ac26b"/>
+    <text x="323" y="624" text-anchor="middle" font-size="10.5" fill="#1a7f37">LXC</text>
+    <text x="112" y="645" font-size="12" fill="#59636e">control node · IaC</text>
+    <text x="722" y="630" text-anchor="end" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="12.5" fill="#1f2328">2 · 1 ГБ · 8 ГБ</text>
+  </g>
+
+  <!-- right panel: storages -->
+  <rect x="768" y="116" width="392" height="238" rx="12" fill="#ffffff" fill-opacity="1" stroke="#d8dee4"/>
+  <text x="790" y="146" font-family="'Segoe UI', Arial, sans-serif" font-size="12.5" letter-spacing="1.2" fill="#59636e">ХРАНИЛИЩА</text>
+
+  <g font-family="'Segoe UI', Arial, sans-serif">
+    <text x="790" y="180" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="12.5" fill="#1f2328">local-lvm</text>
+    <text x="1138" y="180" text-anchor="end" font-size="11.5" fill="#59636e">348 ГБ · 31%</text>
+    <rect x="790" y="188" width="348" height="6" rx="3" fill="#d8dee4"/>
+    <rect x="790" y="188" width="108" height="6" rx="3" fill="url(#bar)"/>
+
+    <text x="790" y="226" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="12.5" fill="#1f2328">local</text>
+    <text x="1138" y="226" text-anchor="end" font-size="11.5" fill="#59636e">94 ГБ · 27%</text>
+    <rect x="790" y="234" width="348" height="6" rx="3" fill="#d8dee4"/>
+    <rect x="790" y="234" width="94" height="6" rx="3" fill="url(#bar)"/>
+
+    <text x="790" y="272" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="12.5" fill="#1f2328">PBS-Server</text>
+    <text x="1138" y="272" text-anchor="end" font-size="11.5" fill="#59636e">457 ГБ · 16%</text>
+    <rect x="790" y="280" width="348" height="6" rx="3" fill="#d8dee4"/>
+    <rect x="790" y="280" width="56" height="6" rx="3" fill="url(#bar)"/>
+
+    <text x="790" y="318" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="12.5" fill="#59636e">ceph-vmstore</text>
+    <text x="1138" y="318" text-anchor="end" font-size="11.5" fill="#59636e">453 ГБ · 0%</text>
+    <rect x="790" y="326" width="348" height="6" rx="3" fill="#d8dee4"/>
+    <rect x="790" y="326" width="4" height="6" rx="3" fill="#d0d7de"/>
+  </g>
+
+  <!-- right panel: what matters -->
+  <rect x="768" y="378" width="392" height="284" rx="12" fill="#ffffff" fill-opacity="1" stroke="#d8dee4"/>
+  <text x="790" y="408" font-family="'Segoe UI', Arial, sans-serif" font-size="12.5" letter-spacing="1.2" fill="#59636e">РЕШЕНИЯ</text>
+
+  <g font-family="'Segoe UI', Arial, sans-serif" font-size="13">
+    <circle cx="795" cy="438" r="3" fill="#1a7f37"/>
+    <text x="812" y="443" fill="#1f2328">Бэкапы на отдельном носителе,</text>
+    <text x="812" y="462" fill="#59636e">а не на том же массиве</text>
+
+    <circle cx="795" cy="492" r="3" fill="#1a7f37"/>
+    <text x="812" y="497" fill="#1f2328">Прод изолирован от служебных</text>
+    <text x="812" y="516" fill="#59636e">сервисов по ресурсам</text>
+
+    <circle cx="795" cy="546" r="3" fill="#1a7f37"/>
+    <text x="812" y="551" fill="#1f2328">Мониторинг разделён:</text>
+    <text x="812" y="570" fill="#59636e">метрики приложений и железо</text>
+
+    <circle cx="795" cy="600" r="3" fill="#D29922"/>
+    <text x="812" y="605" fill="#1f2328">Ceph подключён, диски пока</text>
+    <text x="812" y="624" fill="#59636e">на LVM-thin</text>
+  </g>
+
+  <!-- footer -->
+  <text x="48" y="674" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#59636e">20 vCPU и 15 ГБ RAM выделено при 4 ядрах и 11.4 ГБ физической памяти · фактически занято 6.4 ГБ</text>
+</svg>

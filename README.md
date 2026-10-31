@@ -1,26 +1,40 @@
-<div align="center">
-  <img src="assets/hero.svg" alt="Anton Kurishchev — Linux / DevOps engineer" width="100%" />
-</div>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/hero.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/hero-light.svg">
+  <img alt="Anton Kurishchev — Linux / DevOps engineer, Saint Petersburg, open to work" src="assets/hero.svg" width="100%">
+</picture>
 
 <p align="center">
-  <a href="mailto:it-3@yandex.ru">it-3@yandex.ru</a>
+  <a href="mailto:it-3@yandex.ru">it-3@yandex.ru</a> ·
+  <a href="#инфраструктура">инфраструктура</a> ·
+  <a href="#проекты">проекты</a> ·
+  <a href="#опыт">опыт</a>
 </p>
+
+> [!TIP]
+> **Открыт к предложениям** · Linux / DevOps / SRE, junior–middle · Санкт-Петербург (офис или гибрид) либо удалённо.
 
 ## Кто я
 
-Linux / DevOps-инженер, **3+ года практики**. Отвечаю за инфраструктуру целиком: от гипервизора и сети до мониторинга и восстановления из бэкапа. Всё, что описано ниже, работает не в теории — на моём узле прямо сейчас.
+Прихожу туда, где инфраструктура держится на памяти одного человека, и превращаю её в воспроизводимую: код, мониторинг, бэкапы, документация.
 
-Ищу роль **Linux / DevOps / SRE** в Санкт-Петербурге или удалённо.
+- **3+ года фриланса.** Серверы двух интернет-магазинов: 55 000 SKU, миграции без простоя, дежурство по инцидентам.
+- **Прод, а не песочница.** Сайт, k3s, мониторинг и бэкапы работают на моём узле круглосуточно — схема ниже собрана из живого API.
+- **Инфраструктура как код.** Ansible-роли, манифесты, `--check` перед продом; секреты только в переменных окружения.
 
 ## Инфраструктура
 
-<img src="assets/homelab.svg" alt="Homelab: узел n100 на Proxmox VE 9.2 — 8 гостей (HAOS, bitclimat, Kuber, hermes-agent, PBS, prometheus, zabbix, ansible), их vCPU/RAM/диски и четыре хранилища" width="100%" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/homelab.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/homelab-light.svg">
+  <img alt="Homelab: узел n100 на Proxmox VE 9.2 — восемь гостей (HAOS, bitclimat, Kuber, hermes-agent, PBS, prometheus, zabbix, ansible) с vCPU, RAM и дисками, четыре хранилища" src="assets/homelab.svg" width="100%">
+</picture>
 
-<sub>Схема собрана из API узла, а не нарисована по памяти: снимок на 1 ноября 2026.</sub>
+<sub>Не рисунок «для красоты»: значения сняты с узла через API.[^1]</sub>
 
 ## Проекты
 
-| Проект | Что демонстрирует |
+| Проект | Что доказывает |
 |---|---|
 | **[homelab-ansible](https://github.com/IT-DO/homelab-ansible)** | инвентарь по группам, идемпотентные роли, безопасный rollout и `--check` перед продом |
 | **[k3s-manifests](https://github.com/IT-DO/k3s-manifests)** | примитивы Kubernetes: Deployment, Service, Ingress, PVC, requests/limits |
@@ -39,18 +53,37 @@ Linux / DevOps-инженер, **3+ года практики**. Отвечаю 
 | **Веб / сеть** | Nginx, Traefik, TLS, DNS, DHCP, VLAN, VPN, firewall |
 | **Прочее** | PostgreSQL, SQL Server, Active Directory, REST API, Ceph |
 
-## Принципы
+## Опыт
 
-- **Сначала `--check`, потом прод.** Изменения проверяются до применения, а не после инцидента.
-- **Через Git, а не руками.** Консольные правки — исключение, которое потом всё равно попадает в репозиторий.
-- **Секреты — только в переменных окружения.** В коде и README их нет — это проверяется сканером перед публикацией.
-- **README — часть работы.** Схема, запуск, ограничения: чтобы через полгода не расшифровывать собственные конфиги.
-- **Ручную операцию, повторённую трижды, превращаю в роль или скрипт.**
+<details>
+<summary><b>Фриланс с 2023 и homelab — подробнее</b></summary>
+
+| Период | Роль | Задачи |
+|---|---|---|
+| фев 2023 — н.в. | Инфраструктура, фриланс | `ultra-med.ru`, `bitclimat.ru`: серверы, деплой, TLS, бэкапы, миграции без простоя |
+| 2023 — н.в. | Homelab 24/7 | Proxmox VE, k3s, Prometheus/Zabbix, PBS, Ansible — стенд, на котором проверяются решения до прода |
+
+Как обычно идёт работа:
+
+```mermaid
+flowchart LR
+    A[Заявка] --> B[Аудит:<br/>что и где живёт]
+    B --> C[План и риски]
+    C --> D[IaC:<br/>роли и манифесты]
+    D --> E[Мониторинг<br/>и алерты]
+    E --> F[Бэкапы +<br/>проверка восстановления]
+    F --> G[Документация<br/>и передача]
+```
+
+</details>
 
 ---
 
 <div align="center">
 
-Резюме, рекомендации и разбор любого проекта — по запросу.
+**Резюме, рекомендации и разбор любого проекта — по запросу.**<br>
+<sub>Готов к техническому интервью и разбору домашнего стенда в прямом эфире.</sub>
 
 </div>
+
+[^1]: `GET /api2/json/cluster/resources` на `192.168.10.2`, Proxmox VE 9.2, снимок от 1 ноября 2026.
