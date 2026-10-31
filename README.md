@@ -12,6 +12,8 @@
 
 ---
 
+> 🟢 **Open to work / Открыт к работе** — Linux & DevOps engineer · Saint Petersburg / remote · [resume on hh.ru](https://spb.hh.ru/resume/7757eabdff1139119b0039ed1f5949336c3345) · it-3@yandex.ru
+
 ### 👨‍💻 About me
 
 Linux & DevOps engineer focused on infrastructure and automation. I run a self-hosted homelab (Proxmox + Docker + Kubernetes/k3s), monitor it with Prometheus/Grafana/Zabbix, and automate routine work with Ansible, Bash and Python.
