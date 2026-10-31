@@ -3,7 +3,7 @@
 </div>
 
 <p align="center">
-  <a href="https://spb.hh.ru/resume/7757eabdff1139119b0039ed1f5949336c3345"><img src="https://img.shields.io/badge/OPEN_TO_WORK-resume-238636?style=for-the-badge&labelColor=0D1117" alt="open to work" /></a>
+  <a href="mailto:it-3@yandex.ru"><img src="https://img.shields.io/badge/OPEN_TO_WORK-SRE_%2F_DevOps-238636?style=for-the-badge&labelColor=0D1117" alt="open to work" /></a>
   <a href="mailto:it-3@yandex.ru"><img src="https://img.shields.io/badge/email-it--3%40yandex.ru-EA4335?style=for-the-badge&logo=gmail&logoColor=white&labelColor=0D1117" alt="email" /></a>
   <img src="https://img.shields.io/badge/Saint_Petersburg-remote-58A6FF?style=for-the-badge&logo=googlemaps&logoColor=white&labelColor=0D1117" alt="location" />
 </p>
@@ -54,8 +54,6 @@ flowchart LR
 | **[homelab-ansible](https://github.com/IT-DO/homelab-ansible)** | Ansible | инфраструктура как код: инвентарь по группам, идемпотентные роли, безопасный rollout |
 | **[k3s-manifests](https://github.com/IT-DO/k3s-manifests)** | Kubernetes | примитивы k8s: Deployment, Service, Ingress (Traefik), PVC, requests/limits |
 | **[homelab-docker](https://github.com/IT-DO/homelab-docker)** | Docker Compose | сервисный стек: reverse proxy, Prometheus, Grafana, node-exporter |
-| **[hh-autopilot](https://github.com/IT-DO/hh-autopilot)** | JavaScript · MV3 | расширение для браузера: парсинг страниц, фильтры, лимиты, устойчивость к ошибкам |
-| **[career-ops](https://github.com/IT-DO/career-ops)** | Python | автоматизация поиска работы: сбор вакансий, оценка и отбор |
 
 ## Стек
 
@@ -90,6 +88,6 @@ flowchart LR
 
 **Открыт к работе** · Linux / DevOps / SRE · Санкт-Петербург / удалённо
 
-[it-3@yandex.ru](mailto:it-3@yandex.ru) · [резюме на hh.ru](https://spb.hh.ru/resume/7757eabdff1139119b0039ed1f5949336c3345)
+[it-3@yandex.ru](mailto:it-3@yandex.ru) · резюме по запросу
 
 </div>
