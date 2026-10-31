@@ -26,7 +26,7 @@
   <text x="982" y="66" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#7EE787">8 гостей · все running</text>
 
   <!-- left panel: guests -->
-  <rect x="40" y="116" width="704" height="524" rx="12" fill="#111827" fill-opacity="0.55" stroke="#1F2937"/>
+  <rect x="40" y="116" width="704" height="546" rx="12" fill="#111827" fill-opacity="0.55" stroke="#1F2937"/>
   <text x="62" y="146" font-family="'Segoe UI', Arial, sans-serif" font-size="12.5" letter-spacing="1.2" fill="#6B7280">ГОСТИ</text>
   <text x="722" y="146" text-anchor="end" font-family="'Segoe UI', Arial, sans-serif" font-size="12.5" letter-spacing="0.6" fill="#6B7280">vCPU · RAM · ДИСК</text>
 
@@ -132,7 +132,7 @@
   </g>
 
   <!-- right panel: what matters -->
-  <rect x="768" y="378" width="392" height="262" rx="12" fill="#111827" fill-opacity="0.55" stroke="#1F2937"/>
+  <rect x="768" y="378" width="392" height="284" rx="12" fill="#111827" fill-opacity="0.55" stroke="#1F2937"/>
   <text x="790" y="408" font-family="'Segoe UI', Arial, sans-serif" font-size="12.5" letter-spacing="1.2" fill="#6B7280">РЕШЕНИЯ</text>
 
   <g font-family="'Segoe UI', Arial, sans-serif" font-size="13">
@@ -154,5 +154,5 @@
   </g>
 
   <!-- footer -->
-  <text x="48" y="668" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#6B7280">20 vCPU и 15 ГБ RAM выделено при 4 ядрах и 11.4 ГБ физической памяти · фактически занято 6.4 ГБ</text>
+  <text x="48" y="674" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#6B7280">20 vCPU и 15 ГБ RAM выделено при 4 ядрах и 11.4 ГБ физической памяти · фактически занято 6.4 ГБ</text>
 </svg>

@@ -24,7 +24,6 @@
   <!-- name + role -->
   <text x="56" y="112" font-family="'Segoe UI', Arial, sans-serif" font-size="52" font-weight="700" fill="#E6EDF3">Anton Kurishchev</text>
   <text x="58" y="158" font-family="'Segoe UI', Arial, sans-serif" font-size="26" font-weight="600" fill="url(#accent)">Linux / DevOps engineer</text>
-  <text x="58" y="192" font-family="'Segoe UI', Arial, sans-serif" font-size="17" fill="#9CA3AF">Proxmox · Kubernetes (k3s) · Ansible · Prometheus / Grafana / Zabbix</text>
 
   <!-- chips -->
   <g font-family="'Segoe UI', Arial, sans-serif" font-size="14" fill="#C9D1D9">
