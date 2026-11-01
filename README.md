@@ -27,8 +27,6 @@
   <img alt="Homelab: узел n100 на Proxmox VE 9.2 — восемь гостей (HAOS, bitclimat, Kuber, hermes-agent, PBS, prometheus, zabbix, ansible) с vCPU, RAM и дисками, четыре хранилища" src="assets/homelab.svg?v=5" width="100%">
 </picture>
 
-<sub>Не рисунок «для красоты»: значения сняты с узла через API.</sub>
-
 ## Проекты
 
 | Проект | Что доказывает |
