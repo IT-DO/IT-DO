@@ -7,8 +7,7 @@
 <p align="center">
   <a href="mailto:it-3@yandex.ru">it-3@yandex.ru</a> ·
   <a href="#инфраструктура">инфраструктура</a> ·
-  <a href="#проекты">проекты</a> ·
-  <a href="#опыт">опыт</a>
+  <a href="#проекты">проекты</a>
 </p>
 
 > [!TIP]
@@ -50,30 +49,6 @@
 | **Автоматизация** | Ansible, Bash, Python, Git |
 | **Веб / сеть** | Nginx, Traefik, TLS, DNS, DHCP, VLAN, VPN, firewall |
 | **Прочее** | PostgreSQL, SQL Server, Active Directory, REST API, Ceph |
-
-## Опыт
-
-<details>
-<summary><b>Фриланс с 2023 и homelab — подробнее</b></summary>
-
-| Период | Роль | Задачи |
-|---|---|---|
-| фев 2023 — н.в. | Инфраструктура, фриланс | `ultra-med.ru`, `bitclimat.ru`: серверы, деплой, TLS, бэкапы, миграции без простоя |
-| 2023 — н.в. | Homelab 24/7 | Proxmox VE, k3s, Prometheus/Zabbix, PBS, Ansible — стенд, на котором проверяются решения до прода |
-
-Как обычно идёт работа:
-
-```mermaid
-flowchart LR
-    A[Заявка] --> B[Аудит:<br/>что и где живёт]
-    B --> C[План и риски]
-    C --> D[IaC:<br/>роли и манифесты]
-    D --> E[Мониторинг<br/>и алерты]
-    E --> F[Бэкапы +<br/>проверка восстановления]
-    F --> G[Документация<br/>и передача]
-```
-
-</details>
 
 ---
 
