@@ -27,7 +27,7 @@
   <img alt="Homelab: узел n100 на Proxmox VE 9.2 — восемь гостей (HAOS, bitclimat, Kuber, hermes-agent, PBS, prometheus, zabbix, ansible) с vCPU, RAM и дисками, четыре хранилища" src="assets/homelab.svg?v=5" width="100%">
 </picture>
 
-<sub>Не рисунок «для красоты»: значения сняты с узла через API.[^1]</sub>
+<sub>Не рисунок «для красоты»: значения сняты с узла через API.</sub>
 
 ## Проекты
 
@@ -49,14 +49,3 @@
 | **Автоматизация** | Ansible, Bash, Python, Git |
 | **Веб / сеть** | Nginx, Traefik, TLS, DNS, DHCP, VLAN, VPN, firewall |
 | **Прочее** | PostgreSQL, SQL Server, Active Directory, REST API, Ceph |
-
----
-
-<div align="center">
-
-**Резюме, рекомендации и разбор любого проекта — по запросу.**<br>
-<sub>Готов к техническому интервью и разбору домашнего стенда в прямом эфире.</sub>
-
-</div>
-
-[^1]: `GET /api2/json/cluster/resources` на узле `n100`, Proxmox VE 9.2, снимок от 1 ноября 2026.
